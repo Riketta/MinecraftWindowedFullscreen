@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace MinecraftWindowedFullscreen
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("{0} ver. {1}", typeof(Program).Namespace, Assembly.GetEntryAssembly().GetName().Version.ToString());
             Console.WriteLine("Looking for Minecraft");
             IntPtr hWnd = Utils.GetMinecraftProcess().MainWindowHandle;
 
